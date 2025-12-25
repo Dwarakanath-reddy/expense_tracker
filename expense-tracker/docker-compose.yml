@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  expense-tracker-server:
+    build: .
+    ports:
+      - "8080:5000"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=development
+    command: python app.py
